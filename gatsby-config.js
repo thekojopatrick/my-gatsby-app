@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Design+Code 3`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Complete courses about the best tools and design systems. Prototype and build apps with React and Swift.`,
+    author: `@kojopatrick`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,15 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `zwtmg0zjbrzi`,
+        // Learn about environment variables: https://gatsby.app/env-vars
+        accessToken: 'I0hRXgO2NbfDB-AhxbUkm8uU5HssEykOE0q_tY-WPIY',
+        downloadLocal: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -35,7 +35,7 @@ class Header extends React.Component{
     return (
       <header className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
         <div className="HeaderGroup">
-          <Link to="/"><img src={logo} width="30" /></Link>
+          <Link to="/"><img src={logo} width="30" alt=" "/></Link>
           <Link to="/courses">Courses</Link>
           <Link to="/downloads">Downloads</Link>
           <Link to="/workshops">Workshops</Link>
@@ -45,13 +45,14 @@ class Header extends React.Component{
     )
   }
 }
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
 
 // Header.defaultProps = {
 //   siteTitle: `Courses`,
-//   siteTitle: `Downloads`,
 // }
+
 
 export default Header

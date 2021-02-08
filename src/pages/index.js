@@ -54,18 +54,18 @@ const IndexPage = () => (
 
     <div className="Hero">
       <div className="HeroGroup">
-        <h1>Learn to <br /> design and code React apps</h1>
+        <h1>Learn to <br/> design and code React apps</h1>
         <p>Complete courses about the best tools and design systems.
            Prototype and build apps with React and Swift.</p>
-        <Link to="/page-2/">Watch the Video</Link> <br />
+        <Link to="/page-2/">Watch the Video </Link>
         <div className="Logos">
-          <img src={sketch} width="50" />
-          <img src={figma} width="50" />
-          <img src={invision} width="50" />
-          <img src={framer} width="50" />
-          <img src={react} width="50" />
-          <img src={xcode} width="50" />
-          <img src={swift} width="50" />
+          <img src={sketch} width="50" alt="" />
+          <img src={figma} width="50" alt=""/>
+          <img src={invision} width="50" alt="" />
+          <img src={framer} width="50" alt="" />
+          <img src={react} width="50" alt="" />
+          <img src={xcode} width="50" alt="" />
+          <img src={swift} width="50" alt="" />
         </div>
         <Wave />
       </div>

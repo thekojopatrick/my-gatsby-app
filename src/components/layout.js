@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,6 +19,15 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
+        }
+      }
+      allContentfulLink(sort:{fields :[createdAt],order :ASC}){
+        edges{
+          node{
+            title
+            url
+          }
         }
       }
     }
@@ -25,18 +35,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <Header/>
       <div>
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Header />
+        <main>{children}</main>   
+        <Footer  data ={data} >
+          Backgrounds made in Cinema 4D, iOS app in Swift, site in
+           React.<a href="mailto:kojopatrick84@gmail.com">Email us</a> to ask anything. 
+          © 2020 - Terms of Service - Privacy Policy
+        </Footer>      
       </div>
     </>
   )
@@ -47,3 +53,5 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+

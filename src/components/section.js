@@ -24,7 +24,7 @@ const SectionLogo = styled.img`
 
 const SectionTitleGroup = styled.div`
    display:grid;
-   grid-template-columns : 300px auto;
+   grid-template-columns : 1fr 1fr;
    margin:0 40px;
    grid-gap: 20px;
    grid-template-rows: auto 100%;
@@ -38,16 +38,29 @@ const SectionTitleGroup = styled.div`
 const SectionTitle = styled.h3`
    color : white;
    font-size : 60px;
-   margin : 0;
+   margin-top : 0;
+   margin-left:auto;
    line-height : 1.2;
+   width:70%;
 
    @media (max-width:720px){
      font-size :40px;
+     width:100%;
+     margin:0;
+     text-align:center;
    }
 `
 
 const SectionText = styled.p`
    color : white;
+   width:70%;
+   
+    @media (max-width:720px){
+     width:100%;
+     text-align:center;
+   }
+
+
 `
 
 const WaveBottom = styled.div`
